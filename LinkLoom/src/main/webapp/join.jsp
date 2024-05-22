@@ -23,11 +23,27 @@
 	<%@ include file="/inc/header_visit.jsp" %>
 
 	<!-- 회원가입 시작화면입니다. -->
-
-	
+	<div class="container">
+	<h2>LINKLOOM 회원가입</h2>
+        <form action="" method="post">
+            <div class="form-group">
+                <label for="agreement">필수약관 동의</label>
+                <input type="checkbox" id="agreement" name="agreement" required>
+                <span>필수 약관에 모두 동의합니다.</span>
+            </div>
+            <div class="form-group">
+                <label for="phone">휴대폰 본인인증</label>
+                <input type="text" class="form-control" id="phone" name="phone" placeholder="01012345678" required>
+                <button type="button" class="btn custom-btn" onclick="verifyPhone()">본인인증</button>
+            </div>
+	</form>
+	</div>
 	<%@ include file="/inc/footer.jsp" %>
 	<script>
-	
+	 function verifyPhone() {
+         // 휴대폰 본인인증 로직 구현
+         alert("본인인증이 완료되었습니다.");
+     }
 	</script>
 </body>
 </html>
